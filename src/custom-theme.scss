@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$helloWorld-primary: mat-palette($mat-indigo);
+$helloWorld-accent: mat-palette($mat-pink, A200, A100, A400);
+$helloWorld-warn: mat-palette($mat-red);
+$helloWorld-theme: mat-light-theme($helloWorld-primary, $helloWorld-accent, $helloWorld-warn);
+@include angular-material-theme($helloWorld-theme);
+
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+.dark-theme {
+  color: $light-primary-text;
+  $dark-primary: mat-palette($mat-cyan);
+  $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  @include angular-material-theme($dark-theme);
+}

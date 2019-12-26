@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,6 +58,66 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "production-hi": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/",
+              "i18nFile": "src/locale/messages.hi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "hi",
+              "i18nMissingTranslation": "error"
+            },
+            "hi": {
+              "aot": true,
+              "outputPath": "dist/",
+              "i18nFile": "src/locale/messages.hi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "hi",
+              "i18nMissingTranslation": "error"
+            },
+            "production-gu": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/",
+              "i18nFile": "src/locale/messages.gu.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "gu",
+              "i18nMissingTranslation": "error"
+            },
+            "gu": {
+              "aot": true,
+              "outputPath": "dist/",
+              "i18nFile": "src/locale/messages.gu.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "gu",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -68,6 +129,12 @@
           "configurations": {
             "production": {
               "browserTarget": "helloWorld:build:production"
+            },
+            "hi":{
+              "browserTarget": "helloWorld:build:hi"
+            },
+            "gu":{
+              "browserTarget": "helloWorld:build:gu"
             }
           }
         },
@@ -120,6 +187,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "helloWorld"
 }
